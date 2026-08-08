@@ -1,5 +1,5 @@
 [package]
-org = "zed-pkg"
+org = "zed-pkg-test"
 name = "zed-lib"
 version = "0.1.0"
 description = "Implementations of the zed-pkg interfaces: resolution and policy over the shared contract types"
