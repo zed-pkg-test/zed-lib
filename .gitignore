@@ -5,8 +5,8 @@
 /zed_modules/
 /.zed/pack/
 /.vendor/
-tmp
-temp
+tmp/
+temp/
 
 # Language-slice tooling state
 node_modules/
@@ -20,3 +20,6 @@ src/ts/package-lock.json
 # Repository-local temporary data and authorized Git worktrees
 tmp/worktrees
 temp/worktrees
+
+# machine-local symlink to ORESoftware/my-ai AGENTS.md; never committed
+.ores/
