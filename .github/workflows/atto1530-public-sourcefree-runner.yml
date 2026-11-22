@@ -1,0 +1,20 @@
+name: Atto 1530 public source-free runner budget canary
+on:
+  push:
+    branches: [ci/atto1530-public-sourcefree-runner-20261121]
+permissions:
+  contents: read
+jobs:
+  public-sourcefree:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Prove public-hosted runner works with zero private source
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "ATTO_PRIVATE_SOURCE_TRANSFERRED=FALSE"
+          test -n "$GITHUB_SHA"
+          java -version
+          mvn -version
+          echo "ATTO_PUBLIC_RUNNER_EXECUTED=TRUE"
